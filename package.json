@@ -1,0 +1,27 @@
+{
+  "name": "backend-timecommuting",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Backend for Time Commuting app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "backend",
+    "rest",
+    "API"
+  ],
+  "author": "Santiago Salacodigo",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
