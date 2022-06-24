@@ -4,7 +4,13 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import timeCommutingRoutes from "./routes/formRoutes.js"
 
+import cors from 'cors';
+
 const app = express();
+app.use(cors({
+    origin: '*'
+}));
+
 app.use(express.json())
 
 dotenv.config();

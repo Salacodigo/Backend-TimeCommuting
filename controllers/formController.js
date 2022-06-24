@@ -1,34 +1,41 @@
-import FormResponse from '../models/FormResponse.js'
+import {request, response} from "express"
+import FormResponse from '../models/FormResponseModel.js'
 
 const formResultsGet = async (req, res) => {
     try {
         const results = await FormResponse.find();
-        
-        res.json({
+        res.status(200).json({
             count: results.length,
             msg: 'Los resultados son: ',
             results
         })
     } catch (error) {
         console.log(error);
+        res.status(500).json({
+            msg: 'Contact the administrator'
+        })
     }
 }
 
-const registerResponse = async (req, res) => {
-
-    try {
-        const response = new FormResponse(req.body);
-
-        const savedResponse = await response.save();
+const registerResponse = async (req = request, res = response) => {
+    const { body } = req;
     
-        res.json({
+    try {
+        const response = new FormResponse( body );
+        
+        const savedResponse = await response.save();
+        
+        res.status(200).json({
             savedResponse,
             msg: 'Los resultados se han enviado con éxito'
         })
     } catch (error) {
         console.log(error);
+        res.status(500).json({
+            msg: 'Contact the administrator'
+        })
     }
-
+    
 }
 
 export {

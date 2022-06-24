@@ -31,5 +31,3 @@ const formResponseSchema = mongoose.Schema({
 
 const FormResponse = mongoose.model("FormResponse", formResponseSchema);
 export default FormResponse;
-
-// Received Data
