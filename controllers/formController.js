@@ -27,7 +27,7 @@ const registerResponse = async (req = request, res = response) => {
         
         res.status(200).json({
             savedResponse,
-            msg: 'Los resultados se han enviado con éxito'
+            msg: 'Los resultados se han registrado con éxito'
         })
     } catch (error) {
         console.log(error);
