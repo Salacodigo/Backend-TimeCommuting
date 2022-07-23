@@ -10,60 +10,41 @@ const formResponseSchema = mongoose.Schema({
         type: Number,
         required: true
     },
-    morningStartTime:{
-        type: String,
-        required: true
-    },
-    morningArriveTime:{
-        type: String,
-        required: true
-    },
-    nigthStartTime:{
-        type: String,
-        required: true
-    },
-    nigthArriveTime:{
-        type: String,
-        required: true
-    },
-
-
     dateMorningStartTime:{
         type: Date,
-        required: false
+        required: true
     },
     dateMorningArriveTime:{
         type: Date,
-        required: false
+        required: true
     },
     dateNigthStartTime:{
         type: Date,
-        required: false
+        required: true
     },
     dateNigthArriveTime:{
         type: Date,
-        required: false
+        required: true
     },
     dateMorningDifferenceTime:{
         type: Date,
-        required: false
+        required: true
     },
     dateNigthDifferenceTime:{
         type: Date,
-        required: false
+        required: true
     },
     dateTotalDailyTime:{
         type: Date,
-        required: false
+        required: true
     },
     dateTotalDaysTime:{
-        totalYears: Number, 
-        totalMonths: Number, 
-        totalDays: Number, 
-        totalHours: Number, 
-        totalMinutes: Number
+        totalYears:     { type: Number, required: true }, 
+        totalMonths:    { type: Number, required: true }, 
+        totalDays:      { type: Number, required: true }, 
+        totalHours:     { type: Number, required: true }, 
+        totalMinutes:   { type: Number, required: true }
     },
-
 },
 {
     timestamps: true
