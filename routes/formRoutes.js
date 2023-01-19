@@ -1,13 +1,16 @@
 import express from "express";
 import { 
     formResultsGet, 
-    registerResponse 
+    registerResponse,
+    APIInit
 } from '../controllers/formController.js';
 
 const router = express.Router();
 
-router.get('/results', formResultsGet )
+router.get('/', APIInit)
 
-router.post('/results', registerResponse )
+router.get('/api/form/results', formResultsGet )
+
+router.post('/api/form/results', registerResponse )
 
 export default router;

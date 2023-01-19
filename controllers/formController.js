@@ -38,7 +38,22 @@ const registerResponse = async (req = request, res = response) => {
     
 }
 
+
+const APIInit = (req, res) => {
+    try {
+        res.status(200).json({
+            msg: 'API working',
+        })
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            msg: 'Contact the administrator'
+        })
+    }
+}
+
 export {
     formResultsGet,
-    registerResponse
+    registerResponse,
+    APIInit
 }

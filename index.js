@@ -19,7 +19,7 @@ connectDB();
 
 const port = process.env.PORT || 4000;
 
-app.use("/api/form", timeCommutingRoutes);
+app.use("/", timeCommutingRoutes);
 
 app.listen(port, () => {
     console.log(`Servidor funcionando en el puerto ${port}`)
